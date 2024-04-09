@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API INTEGRATION</title>
+  </head>
+  <body>
+    <h1><em>Api Integration App</em></h1>
+    <div>
+      <%if (locals.content) { %>
+      <p>"Symbol: " <%= content.symbol %></p>
+      <p>"Price: " <%= content.price_24h %></p>
+
+      <% } %>
+    </div>
+  </body>
+</html>
