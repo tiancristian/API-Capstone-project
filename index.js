@@ -27,7 +27,8 @@ app.post("/get-ticker", async (req, res) => {
     console.log(form);
     console.log(result.data);
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    res.render("index.ejs", { error: JSON.stringify(error.response.data) });
+    console.log(error.response.data);
   }
 });
 
