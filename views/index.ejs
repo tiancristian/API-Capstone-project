@@ -8,12 +8,21 @@
   <body>
     <h1><em>Api Integration App</em></h1>
     <div>
-      <%if (locals.content) { %>
+      <% if (locals.content) { %>
       <p>"Symbol: " <%= content.symbol %></p>
       <p>"Price 24Hs: " <%= content.price_24h %></p>
       <p>"Last Traded Price: " <%= content.last_trade_price %></p>
 
       <% } %>
+    </div>
+    <div>
+      <form id="myForm" method="post">
+        <label for="idInput">Search Crypto:</label>
+        <input type="text" id="idInput" name="ticker" />
+
+        <label for="submit">Route:</label>
+        <input id="get" type="submit" value="GET" formaction="/get-ticker" />
+      </form>
     </div>
   </body>
 </html>
